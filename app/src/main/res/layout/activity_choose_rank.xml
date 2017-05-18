@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_above="@+id/rl_bottom"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/appbar"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_weibo"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150px">
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginLeft="39px"
+                android:src="@mipmap/ic_manage_wbid"
+                android:layout_width="60px"
+                android:layout_height="60px"/>
+
+            <TextView
+                android:text="管理微博账号"
+                android:layout_marginLeft="134px"
+                android:textSize="44px"
+                android:textColor="@color/tab_text_se"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_marginRight="38px"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_c_a_right"
+                android:scaleType="fitXY"
+                android:layout_width="60px"
+                android:layout_height="60px"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="151px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            style="@style/line"/>
+
+        <me.jessyan.mvparms.demo.mvp.ui.contact.ChooseRankSelectView
+            android:id="@+id/choose_all"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px"
+            android:layout_width="55px"
+            android:layout_height="55px"/>
+
+        <TextView
+            android:textSize="42px"
+            android:text="全选"
+            android:layout_marginLeft="140px"
+            android:layout_centerVertical="true"
+            style="@style/text_black"/>
+
+        <TextView
+            android:id="@+id/tv_jinghua"
+            android:text="开始净化(0)"
+            android:textSize="46px"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/tab_text_se"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="390px"
+            android:layout_height="150px"/>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

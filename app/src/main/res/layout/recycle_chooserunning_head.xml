@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/rank_head_bg"
+        android:layout_width="match_parent"
+        android:layout_height="1343px">
+
+        <RelativeLayout
+            android:id="@+id/rl_running"
+            android:background="@drawable/anim_rank_head_green"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="338px"
+            android:layout_width="656px"
+            android:layout_height="656px">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:textSize="100px"
+                android:text="15"
+                android:layout_marginLeft="198px"
+                android:layout_marginTop="280px"
+                android:textColor="@color/text_rank_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toRightOf="@+id/tv_time"
+                android:textSize="52px"
+                android:text="分钟"
+                android:layout_marginLeft="15px"
+                android:layout_marginTop="290px"
+                android:textColor="@color/text_rank_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@+id/tv_time"
+                android:textSize="50px"
+                android:text="开始时间"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/text_rank_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_rank"
+            android:text="取消净化"
+            android:textSize="56px"
+            android:textColor="@color/text_rank_green"
+            android:gravity="center"
+            android:background="@drawable/corn20_strokegreen_tran_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="143px"
+            android:layout_width="930px"
+            android:layout_height="117px"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_rank_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="180px">
+
+        <ImageView
+            android:layout_marginLeft="36px"
+            android:src="@mipmap/icon_red_tag"
+            android:scaleType="fitXY"
+            android:layout_width="10px"
+            android:layout_height="54px"/>
+
+        <TextView
+            android:textSize="46px"
+            android:layout_marginLeft="38px"
+            android:text="词条实况:"
+            style="@style/text_black"/>
+
+        <TextView
+            android:id="@+id/tv_rank_content"
+            android:layout_weight="1"
+            android:textSize="46px"
+            android:layout_marginLeft="70px"
+            android:text="查看陈瑶微博搜索词实时排行"
+            style="@style/text_gray"/>
+
+        <ImageView
+            android:layout_marginRight="44px"
+            android:src="@mipmap/ic_c_a_right"
+            android:scaleType="fitXY"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_today"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px"
+        android:layout_width="match_parent"
+        android:layout_height="180px">
+
+        <ImageView
+            android:layout_marginLeft="36px"
+            android:src="@mipmap/icon_red_tag"
+            android:scaleType="fitXY"
+            android:layout_width="10px"
+            android:layout_height="54px"/>
+
+        <TextView
+            android:textSize="46px"
+            android:layout_marginLeft="38px"
+            android:text="今日贡献:"
+            style="@style/text_black"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:textSize="46px"
+            android:layout_marginLeft="70px"
+            android:text="查看陈瑶微博搜索词实时排行"
+            style="@style/text_gray"/>
+
+        <ImageView
+            android:layout_marginRight="44px"
+            android:src="@mipmap/ic_c_a_right"
+            android:scaleType="fitXY"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+    </LinearLayout>
+
+</LinearLayout>

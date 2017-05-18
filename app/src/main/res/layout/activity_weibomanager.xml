@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+          android:orientation="vertical"
+          android:layout_alignParentBottom="true"
+          android:background="@color/background"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <include
+            layout="@layout/appbar"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="40px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:text="绑定多个微博账号可以净化更多次数"
+            style="@style/text_gray"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

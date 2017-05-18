@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/ll_weiboitem"
+              android:layout_width="match_parent"
+              android:layout_height="158px">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="157px">
+
+        <ImageView
+            android:layout_marginLeft="55px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sina_wb"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_marginLeft="140px"
+            android:text="13946154897"
+            android:textSize="38px"
+            style="@style/text_gray"/>
+
+        <TextView
+            android:id="@+id/tv_jiebang"
+            android:background="@mipmap/ic_black_word_tagg"
+            android:layout_marginRight="36px"
+            android:gravity="center"
+            android:text="解绑"
+            android:textSize="44px"
+            android:textColor="@color/tab_text_se"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_c_a_right"
+            android:layout_width="173px"
+            android:layout_height="72px"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/line"/>
+
+</LinearLayout>

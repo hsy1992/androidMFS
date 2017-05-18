@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="372px">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@mipmap/ic_jhts_thts"
+            android:layout_marginLeft="104px"
+            android:layout_width="100px"
+            android:layout_height="100px"/>
+
+        <ImageView
+            android:layout_marginLeft="104px"
+            android:background="@color/line"
+            android:layout_width="1px"
+            android:layout_height="252px"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="一键提升微博优质关联词搜索指数"
+                android:textSize="38px"
+                android:textColor="@color/text_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_start"
+                android:textSize="46px"
+                android:gravity="center_vertical"
+                android:layout_marginTop="60px"
+                android:paddingLeft="120px"
+                android:background="@mipmap/ic_yjjh_ss"
+                android:text="一键净化"
+                android:textColor="@color/text_gray"
+                android:layout_width="382px"
+                android:layout_height="115px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        style="@style/line"/>
+
+</RelativeLayout>

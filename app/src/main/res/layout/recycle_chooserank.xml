@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="255px">
+
+        <me.jessyan.mvparms.demo.mvp.ui.contact.ChooseRankSelectView
+            android:id="@+id/choose_view"
+            android:layout_marginTop="36px"
+            android:layout_marginLeft="36px"
+            android:layout_width="55px"
+            android:layout_height="55px"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginLeft="36px"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_rankName"
+                android:text="陈瑶 吃光全宇宙"
+                android:textSize="44px"
+                style="@style/text_black"/>
+
+            <LinearLayout
+                android:layout_marginTop="20px"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="历史："
+                    android:textSize="40px"
+                    style="@style/text_gray"/>
+
+
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:textSize="32px"
+                    android:text="2234 NO.3"
+                    style="@style/text_gray"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15px"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="现在："
+                    android:textSize="40px"
+                    style="@style/text_gray"/>
+
+
+                <TextView
+                    android:id="@+id/tv_now"
+                    android:textSize="32px"
+                    android:text="1106 NO.5"
+                    style="@style/text_gray"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical|right"
+            android:orientation="vertical"
+            android:layout_marginRight="42px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/loading"
+                android:background="@drawable/anim_rank_item"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="20px"
+                android:layout_width="86px"
+                android:layout_height="86px"/>
+        
+            <TextView
+                android:id="@+id/tv_mingci"
+                android:drawableLeft="@mipmap/ic_rise_rank"
+                android:drawablePadding="15px"
+                android:text="2"
+                android:textSize="38px"
+                android:textColor="@color/text_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_fire"
+                android:text="+1000"
+                android:textSize="32px"
+                android:layout_marginTop="25px"
+                android:textColor="@color/tab_text_se"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_buttom"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70px">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_head"
+            android:src="@mipmap/logo"
+            android:layout_marginLeft="36px"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+        
+        <TextView
+            android:id="@+id/tv_name"
+            android:text="陈瑶网宣组"
+            android:textSize="40px"
+            android:layout_marginLeft="40px"
+            style="@style/text_gray"/>
+
+        <TextView
+            android:text="发布"
+            android:textSize="40px"
+            android:layout_marginLeft="16px"
+            style="@style/text_se"/>
+
+    </LinearLayout>
+
+</LinearLayout>

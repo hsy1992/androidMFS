@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@drawable/corner10_white"
+              android:layout_width="930px"
+              android:layout_height="700px">
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:layout_marginTop="80px"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_sina_wb"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+        <TextView
+            android:textSize="54px"
+            android:layout_marginLeft="20px"
+            android:text="绑定微博账号"
+            style="@style/text_black"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_account"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:background="@drawable/stroke_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="15px"
+        android:textSize="42px"
+        android:hint="请输入微博账号"
+        android:textColorHint="@color/text_gray1"
+        android:layout_marginTop="205px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="814px"
+        android:layout_height="106px"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:layout_below="@+id/et_account"
+        android:background="@drawable/stroke_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="15px"
+        android:textSize="42px"
+        android:hint="请输入微博密码"
+        android:textColorHint="@color/text_gray1"
+        android:layout_marginTop="57px"
+        android:layout_centerHorizontal="true"
+        android:layout_width="814px"
+        android:layout_height="106px"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="134px">
+
+        <ImageView
+            style="@style/line"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="133px">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_weight="1"
+                android:textSize="44px"
+                android:text="取消"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/text_se"/>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                style="@style/line"/>
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:textSize="44px"
+                android:text="确定"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                style="@style/text_se"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

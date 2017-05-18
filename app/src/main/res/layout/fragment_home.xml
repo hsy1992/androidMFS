@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.jess.arms.widget.autolayout.AutoAppBarLayout
+        android:id="@+id/appbar"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--contentScrim 折叠后的颜色
+        layout_scrollFlags 滚动表现-->
+        <com.jess.arms.widget.autolayout.AutoCollapsingToolbarLayout
+            app:contentScrim="@color/tab_text_se"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                app:layout_collapseMode="pin"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="700px">
+
+                <ImageView
+                    android:id="@+id/img_bg"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="519px"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="210px"
+                    android:layout_height="210px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="38px"
+                    android:layout_marginBottom="38px"
+                    android:src="@mipmap/logo"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/white"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="43px"
+                    android:layout_marginLeft="284px"
+                    android:layout_marginBottom="110px"
+                    android:text="陈瑶"
+                    style="@style/text_black"/>
+
+                <TextView
+                    android:text="守护值"
+                    android:textSize="40px"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginLeft="284px"
+                    android:textColor="@color/text_gray"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_value"
+                    android:text="144"
+                    android:textSize="40px"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginLeft="428px"
+                    android:textColor="@color/text_black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_fans"
+                    android:textSize="36px"
+                    android:text="去饭圈"
+                    android:gravity="center"
+                    android:textColor="@color/text_black"
+                    android:background="@drawable/corner_home_btn"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="41px"
+                    android:layout_marginRight="32px"
+                    android:layout_width="210px"
+                    android:layout_height="99px"/>
+
+            </RelativeLayout>
+
+            <!--layout_collapseMode 固定到顶部-->
+            <com.jess.arms.widget.autolayout.AutoToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="218px"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_msg"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginTop="96px"
+                        android:layout_alignParentLeft="true"
+                        android:src="@mipmap/details_comment"
+                        android:layout_width="105px"
+                        android:layout_height="105px"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:textSize="55px"
+                        android:layout_marginTop="120px"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_head_small"
+                        android:layout_width="84px"
+                        android:layout_height="84px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="107px"
+                        android:src="@mipmap/logo"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/white"/>
+
+                </RelativeLayout>
+
+            </com.jess.arms.widget.autolayout.AutoToolbar>
+
+        </com.jess.arms.widget.autolayout.AutoCollapsingToolbarLayout>
+
+        <LinearLayout
+            app:layout_scrollFlags="scroll"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="20px"
+            android:layout_width="match_parent"
+            android:layout_height="151px">
+
+            <TextView
+                android:gravity="center"
+                android:text="净化反黑"
+                android:textColor="@color/tab_text_se"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="150px"/>
+
+            <ImageView
+                style="@style/line"/>
+
+        </LinearLayout>
+
+    </com.jess.arms.widget.autolayout.AutoAppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

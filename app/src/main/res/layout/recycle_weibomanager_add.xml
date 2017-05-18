@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/ll_addweibo"
+              android:layout_width="match_parent"
+              android:layout_height="158px">
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="157px">
+
+        <ImageView
+            android:layout_marginLeft="40px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_bind_plus2"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+        <TextView
+            android:layout_marginLeft="140px"
+            android:text="添加绑定"
+            android:textSize="46px"
+            style="@style/text_se"/>
+
+        <ImageView
+            android:layout_marginRight="60px"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_c_a_right"
+            android:layout_width="60px"
+            android:layout_height="60px"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/line"/>
+
+</LinearLayout>

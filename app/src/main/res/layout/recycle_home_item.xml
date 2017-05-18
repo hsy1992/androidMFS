@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+                android:background="@color/white"
+              android:layout_height="151px">
+
+    <ImageView
+        android:id="@+id/img_step"
+        android:src="@mipmap/ic_clean_tagg1"
+        android:layout_marginLeft="30px"
+        android:scaleType="fitXY"
+        android:layout_width="20px"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="90px"
+        android:text="陈瑶 吃光全宇宙"
+        style="@style/text_black"/>
+    
+    <ImageView
+        android:id="@+id/img_line"
+        android:layout_marginRight="90px"
+        android:layout_marginLeft="90px"
+        android:layout_alignParentBottom="true"
+        style="@style/line"/>
+    
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginRight="138px"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_mingci"
+            android:drawableLeft="@mipmap/ic_rise_rank"
+            android:drawablePadding="15px"
+            android:text="2"
+            android:textSize="33px"
+            android:textColor="@color/text_green"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_fire"
+            android:text="+1000"
+            android:textSize="30px"
+            android:layout_marginTop="20px"
+            android:textColor="@color/tab_text_se"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/img_right"
+        android:visibility="gone"
+        android:layout_marginRight="38px"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_c_a_right"
+        android:scaleType="fitXY"
+        android:layout_width="60px"
+        android:layout_height="60px"/>
+
+
+</RelativeLayout>
