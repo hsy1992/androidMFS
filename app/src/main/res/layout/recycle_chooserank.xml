@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="255px">
 
-        <me.jessyan.mvparms.demo.mvp.ui.contact.ChooseRankSelectView
+        <me.jessyan.mvparms.hsy.mvp.ui.contact.ChooseRankSelectView
             android:id="@+id/choose_view"
             android:layout_marginTop="36px"
             android:layout_marginLeft="36px"

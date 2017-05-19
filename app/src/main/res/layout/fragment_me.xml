@@ -1,17 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.jess.arms.widget.PullPushScrollView
+<com.jess.arms.widget.DropZoomScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:background="@color/tab_text_se"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="675px">
+        android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="675px"
+            android:background="@color/tab_text_se">
+        
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_head"
+                android:src="@mipmap/logo"
+                app:civ_border_overlay="false"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2px"
+                android:layout_marginTop="102px"
+                android:layout_centerHorizontal="true"
+                android:layout_width="211px"
+                android:layout_height="211px"/>
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_marginTop="20px"
+                android:layout_below="@+id/img_head"
+                android:layout_centerHorizontal="true"
+                android:text="瑶妹的专属"
+                android:textSize="46px"
+                style="@style/text_white"/>
 
+            <LinearLayout
+                android:background="@color/transparent_50"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="180px">
 
+                <LinearLayout
+                    android:id="@+id/ll_guard"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
 
-</com.jess.arms.widget.PullPushScrollView>
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:text="1"
+                        android:textSize="36px"
+                        style="@style/text_white"/>
+
+                    <TextView
+                        android:layout_marginTop="15px"
+                        android:text="守护"
+                        android:textSize="40px"
+                        style="@style/text_white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            android:layout_marginTop="30px"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="135px">
+
+            <ImageView
+                android:layout_marginLeft="46px"
+                android:src="@mipmap/my_setting"
+                android:scaleType="fitXY"
+                android:layout_width="66px"
+                android:layout_height="66px"/>
+
+            <TextView
+                android:id="@+id/tv_set"
+                android:text="设置"
+                android:layout_marginLeft="145px"
+                android:textSize="46px"
+                style="@style/text_black"/>
+
+            <ImageView
+                android:layout_marginRight="45px"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/my_right_jiantou"
+                android:layout_width="25px"
+                android:layout_height="46px"/>
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</com.jess.arms.widget.DropZoomScrollView>

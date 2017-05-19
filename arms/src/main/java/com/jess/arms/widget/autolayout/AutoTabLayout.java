@@ -94,11 +94,6 @@ public class AutoTabLayout extends TabLayout
         ViewGroup tabContainer = (ViewGroup) tabGroup.getChildAt(tab.getPosition());
         TextView textView = (TextView) tabContainer.getChildAt(1);
 
-        ImageView icon = (ImageView) tabContainer.getChildAt(0);
-        icon.setScaleType(ImageView.ScaleType.FIT_XY);
-        icon.setLayoutParams(new LinearLayout.LayoutParams(AutoUtils.getPercentWidthSize(270),
-                AutoUtils.getPercentHeightSize(90)));
-
         if (AutoUtils.autoed(textView))
         {
             return;
@@ -115,9 +110,6 @@ public class AutoTabLayout extends TabLayout
 
     }
 
-    public void setTabTextSize(int textSize){
-        mTextSize = textSize;
-    }
 
 }
 

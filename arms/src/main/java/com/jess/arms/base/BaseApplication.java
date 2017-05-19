@@ -1,6 +1,8 @@
 package com.jess.arms.base;
 
 import android.app.Application;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 
 import com.jess.arms.base.delegate.AppDelegate;
 import com.jess.arms.di.component.AppComponent;

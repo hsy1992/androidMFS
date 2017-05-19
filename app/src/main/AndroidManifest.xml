@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="me.jessyan.mvparms.demo">
+          package="me.jessyan.mvparms.hsy">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -15,23 +15,24 @@
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
+        android:installLocation="preferExternal"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".mvp.ui.activity.UserActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.UserActivity"
                   android:windowSoftInputMode="stateHidden"
                   android:screenOrientation="portrait">
         </activity>
 
         <!--欢迎页-->
-        <activity android:name=".mvp.ui.activity.login.WelcomeActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.login.WelcomeActivity"
                   android:windowSoftInputMode="stateHidden|adjustPan"
                   android:launchMode="singleTask"
                   android:screenOrientation="portrait">
         </activity>
 
         <!--主页-->
-        <activity android:name=".mvp.ui.activity.MainActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.MainActivity"
                   android:windowSoftInputMode="stateHidden|adjustPan"
                   android:launchMode="singleTask"
                   android:screenOrientation="portrait">
@@ -43,21 +44,21 @@
         </activity>
 
         <!--选择净化词-->
-        <activity android:name=".mvp.ui.activity.ChooseRankActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.ChooseRankActivity"
                   android:windowSoftInputMode="stateHidden|adjustPan"
                   android:launchMode="singleTask"
                   android:screenOrientation="portrait">
         </activity>
 
         <!--绑定微博账号页面-->
-        <activity android:name=".mvp.ui.activity.WeiBoManagerActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.WeiBoManagerActivity"
                   android:launchMode="singleTask"
                   android:windowSoftInputMode="stateHidden|adjustPan"
                   android:screenOrientation="portrait">
         </activity>
 
         <!--净化中-->
-        <activity android:name=".mvp.ui.activity.ChooseRankRunningActivity"
+        <activity android:name="me.jessyan.mvparms.hsy.mvp.ui.activity.ChooseRankRunningActivity"
                   android:launchMode="singleTask"
                   android:windowSoftInputMode="stateHidden|adjustPan"
                   android:screenOrientation="portrait">
@@ -79,7 +80,7 @@
 
         <!--arms配置-->
         <meta-data
-            android:name="me.jessyan.mvparms.demo.app.GlobalConfiguration"
+            android:name="me.jessyan.mvparms.hsy.app.GlobalConfiguration"
             android:value="ConfigModule"/>
 
     </application>

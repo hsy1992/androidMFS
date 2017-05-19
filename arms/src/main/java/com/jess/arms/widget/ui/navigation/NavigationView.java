@@ -4,6 +4,9 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
+import android.os.AsyncTask;
+import android.os.CountDownTimer;
+import android.support.annotation.Px;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,13 +14,20 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.jess.arms.utils.IdiUtils;
 import com.jess.arms.widget.autolayout.AutoTabLayout;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 /**
@@ -29,10 +39,11 @@ public class NavigationView extends AutoRelativeLayout {
 
     private Context mContext;
     private ViewPager viewPager;
-    private AutoTabLayout tabLayout;
+    private TabLayout tabLayout;
     private RelativeLayout.LayoutParams lp;
     private RelativeLayout.LayoutParams lpPager;
     private AttributeSet attrs;
+    private Timer timer = new Timer();
 
 
     public NavigationView(Context context, AttributeSet attrs) {
@@ -43,7 +54,7 @@ public class NavigationView extends AutoRelativeLayout {
     }
 
     private void initView() {
-        tabLayout = new AutoTabLayout(mContext);
+        tabLayout = new AutoTabLayout(mContext,attrs);
         tabLayout.setId(IdiUtils.generateViewId());
         viewPager = new ViewPager(mContext);
         viewPager.setId(IdiUtils.generateViewId());
@@ -97,49 +108,25 @@ public class NavigationView extends AutoRelativeLayout {
         //设置tablayout
         tabLayout.setLayoutParams(lp);
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
-        tabLayout.setTabTextSize(navigationModel.textSize);
         tabLayout.setSelectedTabIndicatorColor(navigationModel.tabLineColor);
         tabLayout.setTabTextColors(navigationModel.colorNormal,navigationModel.colorCheck);
+        tabLayout.setupWithViewPager(viewPager);
+
         //设置tab
         for (int i = 0; i < navigationModel.list.size(); i++) {
             TabModel model = navigationModel.list.get(i);
-            tabLayout.addTab(tabLayout.newTab()
-                    .setIcon(buildDrawable(model.getPicNormal(),model.getPicCheck()))
-                    .setText(model.getText()),i == 0 ? true :false);
+            tabLayout.getTabAt(i).setIcon(buildDrawable(model.getPicNormal(),model.getPicCheck()));
+
+            ViewGroup tabGroup = (ViewGroup) tabLayout.getChildAt(0);
+            ViewGroup tabContainer = (ViewGroup) tabGroup.getChildAt(i);
+
+            ImageView icon = (ImageView) tabContainer.getChildAt(0);
+            icon.setScaleType(ImageView.ScaleType.FIT_XY);
+            icon.setLayoutParams(new LinearLayout.LayoutParams(AutoUtils.getPercentWidthSize(270),
+                    AutoUtils.getPercentHeightSize(90)));
+
         }
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                tabLayout.setScrollPosition(position,0,true);
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
         this.addView(viewPager);
         this.addView(tabLayout);
     }

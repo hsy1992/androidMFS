@@ -63,7 +63,7 @@
         <ImageView
             style="@style/line"/>
 
-        <me.jessyan.mvparms.demo.mvp.ui.contact.ChooseRankSelectView
+        <me.jessyan.mvparms.hsy.mvp.ui.contact.ChooseRankSelectView
             android:id="@+id/choose_all"
             android:layout_centerVertical="true"
             android:layout_marginLeft="36px"
